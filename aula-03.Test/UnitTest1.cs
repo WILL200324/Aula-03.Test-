@@ -10,4 +10,26 @@ public class UnitTest1
 
        Assert.AreEqual(5, resultado);
     }
+    [Test]
+public void Deve_Aumentar_Canal()
+{
+    tv.SelecionarCanal(10);
+    tv.AumentarCanal();
+    Assert.AreEqual(11, tv.Canal);
+}
+
+[Test]
+public void Deve_Diminuir_Canal()
+{
+    tv.SelecionarCanal(10);
+    tv.DiminuirCanal();
+    Assert.AreEqual(9, tv.Canal);
+}
+
+[Test]
+public void Deve_Selecionar_Canal_Pelo_Numero()
+{
+    tv.SelecionarCanal(505);
+    Assert.AreEqual(505, tv.Canal);
+}
 }
